@@ -14,7 +14,7 @@ namespace Cocpit
         /// Konstruktor
         /// </summary>
         public CocpitPlugin()
-        : base("Cocpit")
+        : base("Cocpit", "/Asserts/img/Cocpit.svg")
         {
         }
 
@@ -28,7 +28,7 @@ namespace Cocpit
 
             ViewModel.Instance.Context = Context;
             ViewModel.Instance.Init();
-            Context.Log.Info(MethodBase.GetCurrentMethod(), "MtWbPlugin initialisierung");
+            Context.Log.Info(MethodBase.GetCurrentMethod(), "Cocpit Plugin initialisierung");
 
             Register(new WorkerFile(new Path(Context, "", "Assets/.*"), Context.AssetBaseFolder));
 

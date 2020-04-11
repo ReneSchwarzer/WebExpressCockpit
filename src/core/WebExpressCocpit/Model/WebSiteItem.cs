@@ -18,17 +18,5 @@ namespace Cocpit.Model
         /// </summary>
         [XmlElement("url")]
         public string Url { get; set; }
-
-        /// <summary>
-        /// Liefert oder setzt die Url des Logos des Webdienstes
-        /// </summary>
-        [XmlElement("icon")]
-        public string IconUrl { get; set; }
-
-        /// <summary>
-        /// Liefert oder setzt die Url des der Statusseite
-        /// </summary>
-        [XmlElement("status")]
-        public string Status { get; set; }
     }
 }

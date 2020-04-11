@@ -96,22 +96,22 @@ namespace Cocpit.Model
             var client = new HttpClient();
             try
             {
-                foreach (var webSite in Settings.WebSites)
-                {
-                    if (!string.IsNullOrWhiteSpace(webSite.Status))
-                    {
-                        var url = webSite.Url + "/status";
-                        var responseBody = client.GetStringAsync(url).Result;
+                //foreach (var webSite in Settings.WebSites)
+                //{
+                //    if (!string.IsNullOrWhiteSpace(webSite.Status))
+                //    {
+                //        var url = webSite.Url + "/status";
+                //        var responseBody = client.GetStringAsync(url).Result;
 
 
-                        if (!Status.ContainsKey(webSite))
-                        {
-                            Status.Add(webSite, null);
-                        }
+                //        if (!Status.ContainsKey(webSite))
+                //        {
+                //            Status.Add(webSite, null);
+                //        }
 
-                        Status[webSite] = responseBody;
-                    }
-                }
+                //        Status[webSite] = responseBody;
+                //    }
+                //}
             }
             catch (HttpRequestException ex)
             {

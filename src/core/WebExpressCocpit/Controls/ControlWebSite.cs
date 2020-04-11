@@ -36,18 +36,18 @@ namespace Cocpit.Controls
         /// <returns>Das Control als HTML</returns>
         public override IHtmlNode ToHtml()
         {
-            var icon = WebSite.IconUrl;
+            //var icon = WebSite.IconUrl;
 
-            if (!icon.StartsWith("/"))
-            {
-                icon = "/" + icon;
-            }
+            //if (!icon.StartsWith("/"))
+            //{
+            //    icon = "/" + icon;
+            //}
 
-            icon = WebSite.Url + icon;
+            //icon = WebSite.Url + icon;
 
             var media = new ControlPanelMedia(Page)
             {
-                Image = string.IsNullOrWhiteSpace(WebSite.IconUrl) ? Page.GetPath(0, "Assets/img/Logo.png") : new Path(null, icon),
+                Image = Page.GetPath(), //string.IsNullOrWhiteSpace(WebSite.IconUrl) ? Page.GetPath(0, "Assets/img/Logo.png") : new Path(null, icon),
                 ImageWidth = 100,
                 ImageHeight = 100,
                 Title = new ControlLink(Page)
