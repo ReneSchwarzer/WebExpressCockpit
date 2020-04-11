@@ -1,0 +1,12 @@
+[Unit]
+Description=Cocpit Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cocpit/
+ExecStart=/opt/cocpit/cocpit.sh
+
+[Install]
+WantedBy=multi-user.target
